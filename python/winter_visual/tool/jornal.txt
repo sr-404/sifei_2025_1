@@ -1,0 +1,6 @@
+#real video blue
+lower_blue = np.array([100, 100, 100])
+upper_blue = np.array([120, 200, 250])
+
+#fps无法变化，硬件问题
+
