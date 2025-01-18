@@ -1,0 +1,17 @@
+#real video blue
+lower_blue = np.array([100, 100, 100])
+upper_blue = np.array([120, 200, 250])
+
+#fps无法变化，硬件问题
+
+# 设置红色的HSV范围
+    lower_red = np.array([0, 120, 120])  # 低红色范围
+    upper_red = np.array([10, 255, 255])  # 高红色范围
+    mask_red = cv2.inRange(hsv, lower_red, upper_red)
+    
+    lower_red2 = np.array([170, 120, 120])  # 红色另一部分范围
+    upper_red2 = np.array([180, 255, 255])
+    mask_red2 = cv2.inRange(hsv, lower_red2, upper_red2)
+
+    # 合并红色掩码
+    mask_red = cv2.bitwise_or(mask_red, mask_red2)
